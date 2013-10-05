@@ -13,18 +13,20 @@ def hello_world():
 
 
 @app.route('/intensity/set/<int:intensity>')
-def show_post(intensity):
+def put_post(intensity):
     intensity = str(intensity)
     # intensity.save('intensity')
     # show the post with the given id, the id is an integer
+    with open("test.txt", "wb") as fo:
+        fo.write(intensity)
     return 'intensity set to ' + intensity
 
 
-# @app.route('/intensity/get')
-# def show_post():
-#     i = load('intensity')
-#     # show the post with the given id, the id is an integer
-#     return i
+@app.route('/intensity/get')
+def show_post():
+    with open("test.txt", "rb") as fo:
+        for line in fo:
+            return line
 
 
 @app.route('/projects/')
