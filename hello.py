@@ -15,12 +15,12 @@ def hello_world():
 @app.route('/intensity/set/<int:intensity>')
 def show_post(intensity):
     intensity = str(intensity)
-    intensity.save('intensity')
+    # intensity.save('intensity')
     # show the post with the given id, the id is an integer
-    return 'intensity set'
+    return 'intensity set to ' + intensity
 
 
-# @app.route('/intensity')
+# @app.route('/intensity/get')
 # def show_post():
 #     i = load('intensity')
 #     # show the post with the given id, the id is an integer
