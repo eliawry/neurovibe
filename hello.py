@@ -31,5 +31,44 @@ def show_leap():
         for line in fo:
             return line
 
+
+@app.route('/is_on')
+def is_it_on():
+    with open("go.txt", "rb") as fo:
+        for line in fo:
+            return line
+
+
+@app.route('/start')
+def start_it():
+    with open("go.txt", "wb") as fo:
+        fo.write('YES')
+    return """<!DOCTYPE html>
+            <html>
+            <body>
+            <a href="/">
+            <button type="button" onclick="">I'm satisfied!</button>
+            <embed src="hot.mp3">
+            </a>
+            </body>
+            </html>
+            """
+
+
+@app.route('/')
+def hello():
+    with open("go.txt", "wb") as fo:
+        fo.write('NO')
+    return """<!DOCTYPE html>
+            <html>
+            <body>
+            <a href="/start">
+            <button type="button" onclick="">Let me have it!</button>
+            </a>
+            </body>
+            </html>
+            """
+
+
 if __name__ == '__main__':
     app.run()
