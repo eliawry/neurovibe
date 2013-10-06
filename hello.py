@@ -52,8 +52,8 @@ def start_it():
             <div class="wrapper">
             <a href="/">
             <button type="button" onclick="">I'm satisfied!</button>
-            </div?
-            <embed src="http://cs.utexas.edu/~elie/hot.mp3" hidden="true">
+            </div>
+            <embed src="http://cs.utexas.edu/~elie/hot.mp3" hidden='true'>
             </a>
             </body>
             </html>
