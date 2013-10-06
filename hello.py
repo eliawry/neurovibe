@@ -49,8 +49,10 @@ def start_it():
             <link rel="stylesheet" type="text/css" href="static/style.css">
             </head>
             <body>
+            <div class="wrapper">
             <a href="/">
             <button type="button" onclick="">I'm satisfied!</button>
+            </div?
             <embed src="http://cs.utexas.edu/~elie/hot.mp3" hidden="true">
             </a>
             </body>
@@ -68,8 +70,10 @@ def hello():
             <link rel="stylesheet" type="text/css" href="static/style.css">
             </head>
             <body>
+            <div class="wrapper">
             <a href="/start">
             <button type="button" onclick="">Let me have it!</button>
+            </div>
             </a>
             </body>
             </html>
