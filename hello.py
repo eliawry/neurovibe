@@ -7,31 +7,95 @@ class IntensityTracker(object):
         self.intensity = 0
 
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
+@app.route('/alpha/set/<int:alpha>')
+def put_alpha(alpha):
+    alpha = str(alpha)
+    with open("alpha.txt", "wb") as fo:
+        fo.write(alpha)
+    return 'alpha set to ' + alpha
 
 
-@app.route('/intensity/set/<int:intensity>')
-def put_post(intensity):
-    intensity = str(intensity)
-    # intensity.save('intensity')
-    # show the post with the given id, the id is an integer
-    with open("test.txt", "wb") as fo:
-        fo.write(intensity)
-    return 'intensity set to ' + intensity
-
-
-@app.route('/intensity/get')
-def show_post():
-    with open("test.txt", "rb") as fo:
+@app.route('/alpha/get')
+def show_alpha():
+    with open("alpha.txt", "rb") as fo:
         for line in fo:
             return line
 
 
-@app.route('/projects/')
-def projects():
-    return 'The project page'
+@app.route('/beta/set/<int:beta>')
+def put_beta(beta):
+    beta = str(beta)
+    with open("beta.txt", "wb") as fo:
+        fo.write(beta)
+    return 'beta set to ' + beta
+
+
+@app.route('/beta/get')
+def show_beta():
+    with open("beta.txt", "rb") as fo:
+        for line in fo:
+            return line
+
+
+@app.route('/gamma/set/<int:gamma>')
+def put_gamma(gamma):
+    gamma = str(gamma)
+    with open("gamma.txt", "wb") as fo:
+        fo.write(gamma)
+    return 'gamma set to ' + gamma
+
+
+@app.route('/gamma/get')
+def show_gamma():
+    with open("gamma.txt", "rb") as fo:
+        for line in fo:
+            return line
+
+
+@app.route('/delta/set/<int:delta>')
+def put_delta(delta):
+    delta = str(delta)
+    with open("delta.txt", "wb") as fo:
+        fo.write(delta)
+    return 'delta set to ' + delta
+
+
+@app.route('/delta/get')
+def show_delta():
+    with open("delta.txt", "rb") as fo:
+        for line in fo:
+            return line
+
+
+@app.route('/theta/set/<int:theta>')
+def put_theta(theta):
+    theta = str(theta)
+    with open("theta.txt", "wb") as fo:
+        fo.write(theta)
+    return 'theta set to ' + theta
+
+
+@app.route('/theta/get')
+def show_theta():
+    with open("theta.txt", "rb") as fo:
+        for line in fo:
+            return line
+
+
+@app.route('/attention/set/<int:attention>')
+def put_attention(attention):
+    attention = str(attention)
+    with open("attention.txt", "wb") as fo:
+        fo.write(attention)
+    return 'attention set to ' + attention
+
+
+@app.route('/attention/get')
+def show_attention():
+    with open("attention.txt", "rb") as fo:
+        for line in fo:
+            return line
+
 
 if __name__ == '__main__':
     app.run()
