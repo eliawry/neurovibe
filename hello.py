@@ -42,7 +42,28 @@ def is_it_on():
 @app.route('/start')
 def start_it():
     with open("go.txt", "wb") as fo:
-        fo.write('YES')
+        fo.write('LEAP')
+    return """<!DOCTYPE html>
+            <html>
+            <head>
+            <link rel="stylesheet" type="text/css" href="static/style.css">
+            </head>
+            <body>
+            <div class="wrapper">
+            <a href="/">
+            <button type="button" onclick="">I'm satisfied!</button>
+            </div>
+            <embed src="http://cs.utexas.edu/~elie/hot.mp3" hidden='true'>
+            </a>
+            </body>
+            </html>
+            """
+
+
+@app.route('/brain')
+def start_brain():
+    with open("go.txt", "wb") as fo:
+        fo.write('BRAIN')
     return """<!DOCTYPE html>
             <html>
             <head>
@@ -71,10 +92,16 @@ def hello():
             </head>
             <body>
             <div class="wrapper">
-            <a href="/start">
-            <button type="button" onclick="">Let me have it!</button>
-            </div>
+            <a href="/brain">
+            <button type="button" onclick="">Think it!</button>
             </a>
+            <a href="/start">
+            <button type="button" onclick="">Show it!</button>
+            </a>
+            <a href="/start">
+            <button type="button" onclick="">Train it!</button>
+            </a>
+            </div>
             </body>
             </html>
             """
