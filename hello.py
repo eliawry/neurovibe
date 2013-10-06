@@ -45,10 +45,13 @@ def start_it():
         fo.write('YES')
     return """<!DOCTYPE html>
             <html>
+            <head>
+            <link rel="stylesheet" type="text/css" href="static/style.css">
+            </head>
             <body>
             <a href="/">
             <button type="button" onclick="">I'm satisfied!</button>
-            <embed src="hot.mp3">
+            <embed src="http://cs.utexas.edu/~elie/hot.mp3" hidden="true">
             </a>
             </body>
             </html>
@@ -61,6 +64,9 @@ def hello():
         fo.write('NO')
     return """<!DOCTYPE html>
             <html>
+            <head>
+            <link rel="stylesheet" type="text/css" href="static/style.css">
+            </head>
             <body>
             <a href="/start">
             <button type="button" onclick="">Let me have it!</button>
