@@ -47,7 +47,7 @@ button {
     text-shadow:1px 1px 0px #8628ce;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+    margin-top: 4%;
     margin-bottom: auto;
 } button:hover {
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a341ee), color-stop(1, #c579ff) );
